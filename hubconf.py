@@ -15,8 +15,8 @@ def custom_model():
 	# returns model
 	model = mlp.get_training_model()
 	model_path = os.path.join(repo_dir, "output", "model_wt.pth")
-
+	
         if not os.path.exists(model_path):
-             raise FileNotFoundError(f"Model file not found at {model_path}")
+		raise FileNotFoundError(f"Model file not found at {model_path}")
 	model.load_state_dict(torch.load(model_path))
 	return model
