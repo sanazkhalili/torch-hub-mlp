@@ -14,6 +14,7 @@ def custom_model():
 	# initialize the model
 	# load weights from path
 	# returns model
+	repo_dir = os.path.dirname(__file__)
 	model = mlp.get_training_model()
 	model_path = os.path.join(repo_dir, "output", "model_wt.pth")
 	if not os.path.exists(model_path):
